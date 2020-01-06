@@ -74,8 +74,10 @@ body {
 .calendar {
     margin-top: 60px;
     border: 1px solid #00000033;
-    border-radius: 6px;
     width: 262.75px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    cursor: default;
 }
 
 .calendar .title, .calendar .weekDays {
@@ -105,6 +107,7 @@ body {
     width: 37.25px;
     height: 37.25px;
     line-height: 2.3em;
+    user-select: none;
 }
 
 .calendar .weekDays .item {
@@ -118,17 +121,20 @@ body {
 
 .calendar .content .item {
     cursor: pointer;
-    transition: color .09s ease-out, background .09s ease-out;
+    transition: background .06s cubic-bezier(0, .8, 1, 1);
 }
 
 .calendar .content .item:hover {
+    background-color: #e4e4e4;
+}
+
+.calendar .content .item.current {
     color: #FFFFFF;
     background-color: #1861ac;
 }
 
 /* All months */
 .calendar.current, .calendar.past, .calendar.next {
-    
 }
 
 /* Current month */
@@ -148,5 +154,6 @@ body {
 
 .calendarList {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-flow: row wrap;
 }

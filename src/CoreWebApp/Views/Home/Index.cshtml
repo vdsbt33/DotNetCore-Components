@@ -7,12 +7,12 @@
 }
     <div class="calendarList">
         <!-- Last month -->
-        <partial name="~/Views/Shared/Components/_Calendar.cshtml" model="@currentDate.AddMonths(-1)" />
+        <partial name="~/Views/Shared/Components/_Calendar.cshtml" model="@(new CoreWebApp.Models.CalendarInfo(currentDate.AddMonths( -1 ), false))" />
 
         <!-- Current month -->
-        <partial name="~/Views/Shared/Components/_Calendar.cshtml" model="@currentDate" />
+        <partial name="~/Views/Shared/Components/_Calendar.cshtml" model="@(new CoreWebApp.Models.CalendarInfo(currentDate, true))" />
 
         <!-- Next month -->
-        <partial name="~/Views/Shared/Components/_Calendar.cshtml" model="@currentDate.AddMonths(1)" />
+        <partial name="~/Views/Shared/Components/_Calendar.cshtml" model="@(new CoreWebApp.Models.CalendarInfo(currentDate.AddMonths( 1 ), false))" />
     </div>
 
