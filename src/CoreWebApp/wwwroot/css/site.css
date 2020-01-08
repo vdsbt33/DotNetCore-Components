@@ -157,3 +157,10 @@ body {
     justify-content: space-around;
     flex-flow: row wrap;
 }
+
+.calendarAction {
+    background-color: #FFF;
+    border-radius: 2px;
+    padding: 2px;
+    box-shadow: #00000055 1px 1px 5px;
+}
